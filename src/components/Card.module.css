@@ -1,0 +1,12 @@
+.ingredienser {
+  color: var(--font-color-muted);
+  font-size: 0.9rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--padding);
+  background: color-mix(in srgb, var(--background-color) 80%, white 20%);
+  border-radius: 10px;
+}

@@ -1,5 +1,7 @@
 import "./App.css";
 import List from "./components/List";
+import "./components/Var.css";
+import logo from "./assets/yummers.svg";
 
 function App() {
   const meny = [
@@ -76,32 +78,40 @@ function App() {
   ];
 
   return (
-    <>
-      <section id="forretter">
-        <h2>Forretter</h2>
-        {meny
-          .filter((item) => item.kategori === "Forrett")
-          .map((item) => (
-            <List key={item.id} items={[item]} />
-          ))}
-      </section>
-      <section id="hovedretter">
-        <h2>Hovedretter</h2>
-        {meny
-          .filter((item) => item.kategori === "Hovedrett")
-          .map((item) => (
-            <List key={item.id} items={[item]} />
-          ))}
-      </section>
-      <section id="desserter">
-        <h2>Desserter</h2>
-        {meny
-          .filter((item) => item.kategori === "Dessert")
-          .map((item) => (
-            <List key={item.id} items={[item]} />
-          ))}
-      </section>
-    </>
+    <div className="app">
+      <header>
+        <img id="logo" src={logo} alt="Logo for big yummers" />
+        <hr className="horizontal-line" />
+      </header>
+      <main>
+        <section id="forretter">
+          <h2 className="category-title">Forretter</h2>
+          {meny
+            .filter((item) => item.kategori === "Forrett")
+            .map((item) => (
+              <List key={item.id} items={[item]} />
+            ))}
+        </section>
+        <hr className="vertical-line" />
+        <section id="hovedretter">
+          <h2 className="category-title">Hovedretter</h2>
+          {meny
+            .filter((item) => item.kategori === "Hovedrett")
+            .map((item) => (
+              <List key={item.id} items={[item]} />
+            ))}
+        </section>
+        <hr className="vertical-line" />
+        <section id="desserter">
+          <h2 className="category-title">Desserter</h2>
+          {meny
+            .filter((item) => item.kategori === "Dessert")
+            .map((item) => (
+              <List key={item.id} items={[item]} />
+            ))}
+        </section>
+      </main>
+    </div>
   );
 }
 
