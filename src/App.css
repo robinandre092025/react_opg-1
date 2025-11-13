@@ -6,6 +6,7 @@
   background: var(--background-color);
   text-align: center;
   width: 70vw;
+  min-width: 725px;
   margin: 2rem auto;
   border-radius: 20px;
 }
