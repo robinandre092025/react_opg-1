@@ -1,6 +1,6 @@
+import "./components/Var.css";
 import "./App.css";
 import List from "./components/List";
-import "./components/Var.css";
 import logo from "./assets/yummers.svg";
 
 function App() {
